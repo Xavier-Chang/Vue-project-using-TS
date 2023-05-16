@@ -1,6 +1,10 @@
 <template>
   <div class="app">
     <header>
+      <div class="title">
+        <img src="./assets/images/developer-icon.svg" alt="logo" />
+        <h1>Developer Jobs</h1>
+      </div>
       <div class="order">
         <button @click="handleClick('title')">Order by title</button>
         <button @click="handleClick('salary')">Order by salary</button>
@@ -19,12 +23,66 @@ import JobsList from "./components/JobsList.vue";
 import { OrderTerm } from "./types/OrderTerm";
 
 const jobs = ref<Job[]>([
-  { title: "Full Stack Developer", location: "ANP", salary: 3_500, id: "1948" },
-  { title: "farm worker", location: "lon lon ranch", salary: 30000, id: "1" },
-  { title: "quarryman", location: "death mountain", salary: 40000, id: "2" },
-  { title: "flute player", location: "the lost woods", salary: 35000, id: "3" },
-  { title: "fisherman", location: "lake hylia", salary: 21000, id: "4" },
-  { title: "prison guard", location: "gerudo valley", salary: 32000, id: "5" },
+  {
+    title: "Full Stack Developer",
+    location: "Amsterdam",
+    salary: 60000,
+    id: "1",
+  },
+  {
+    title: "Front End Developer",
+    location: "Rotterdam",
+    salary: 55000,
+    id: "2",
+  },
+  {
+    title: "Back End Developer",
+    location: "The Hague",
+    salary: 58000,
+    id: "3",
+  },
+  {
+    title: "Mobile Developer",
+    location: "Utrecht",
+    salary: 50000,
+    id: "4",
+  },
+  {
+    title: "Data Scientist",
+    location: "Eindhoven",
+    salary: 65000,
+    id: "5",
+  },
+  {
+    title: "AI Engineer",
+    location: "Tilburg",
+    salary: 70000,
+    id: "6",
+  },
+  {
+    title: "Cloud Engineer",
+    location: "Groningen",
+    salary: 60000,
+    id: "7",
+  },
+  {
+    title: "DevOps Engineer",
+    location: "Almere",
+    salary: 55000,
+    id: "8",
+  },
+  {
+    title: "Software Tester",
+    location: "Breda",
+    salary: 45000,
+    id: "9",
+  },
+  {
+    title: "System Analyst",
+    location: "Nijmegen",
+    salary: 47500,
+    id: "10",
+  },
 ]);
 const order = ref<OrderTerm>("title");
 
@@ -38,6 +96,17 @@ header {
   text-align: center;
   .order {
     margin-top: 20px;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    width: 60px;
+    margin-right: 20px;
+  }
+  h1 {
+    font-size: 3em;
   }
 }
 
